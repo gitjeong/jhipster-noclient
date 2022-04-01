@@ -29,6 +29,6 @@ public class EmailServiceController {
     @PostMapping("/email/tagWithTemplate")
     public ResponseEntity<?> sendEmail(@Valid @RequestBody EmailDTO emailDto){
         emailService.setUrlTail("/sender/tagMail");
-        return emailService.sendEmail(emailDto);
+        return emailService.doSendEmail(emailDto);
     }
 }
